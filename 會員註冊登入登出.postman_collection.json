@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "1b49bfe9-abef-406d-89f0-615d1e7d6241",
+		"name": "會員註冊登入登出",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27175176",
+		"_collection_link": "https://speeding-rocket-219322.postman.co/workspace/BlindBox~6a53a0a5-aeba-4059-a5e9-27a54eed8959/collection/27175176-1b49bfe9-abef-406d-89f0-615d1e7d6241?action=share&source=collection_link&creator=27175176"
+	},
+	"item": [
+		{
+			"name": "會員註冊",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"mark\",\r\n    \"email\":\"mark@gmail\",\r\n    \"password\":\"123123123\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/UserRegister",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"UserRegister"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "會員登入",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"benson@gmail\",\r\n    \"password\":\"123123123\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/UserLogin",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"UserLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "會員登出",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL1VzZXJMb2dpbiIsImlhdCI6MTcwMjg0MjMwNSwiZXhwIjoxNzAyODQ1OTA1LCJuYmYiOjE3MDI4NDIzMDUsImp0aSI6IlRHSjR5aU81UXJYdWp6UTkiLCJzdWIiOiIzNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.eiUs7LYOLpCGwaP7ok0vthroGkRQCPsjS9S4qOsZoCQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/UserLogout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"UserLogout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

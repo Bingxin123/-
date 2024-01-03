@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "e57656e8-b71b-4b68-9cac-3dc6ee860284",
+		"name": "店家註冊登入登出",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27175176",
+		"_collection_link": "https://speeding-rocket-219322.postman.co/workspace/BlindBox~6a53a0a5-aeba-4059-a5e9-27a54eed8959/collection/27175176-e57656e8-b71b-4b68-9cac-3dc6ee860284?action=share&source=collection_link&creator=27175176"
+	},
+	"item": [
+		{
+			"name": "店家註冊",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"惡質店家\",\r\n    \"email\":\"bad@gmail\",\r\n    \"password\":\"123123123\",\r\n    \"long\":\"454.5\",\r\n    \"lat\":\"-652.0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/StoreRegister",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"StoreRegister"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "店家登入",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"bad@gmail\",\r\n    \"password\":\"123123123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/StoreLogin",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"StoreLogin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "店家登出",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL1N0b3JlTG9naW4iLCJpYXQiOjE3MDI4MjA0MzIsImV4cCI6MTcwMjgyNDAzMiwibmJmIjoxNzAyODIwNDMyLCJqdGkiOiJESXo3SlEzeVVSMnJaTFdoIiwic3ViIjoiMjUiLCJwcnYiOiI2MmJjOGQwZGVhOWJiZDViZGU5ODY5MDg1MmIxMTM1MjZlZmVkYmZhIn0.gnJeyEqRsRPmFDIPo6PJsUXn3ITjbYRLXDGxYJy1X68",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/StoreLogout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"StoreLogout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

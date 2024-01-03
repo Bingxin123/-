@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "5b9e935b-1a58-4588-bfa0-fcb93e2081e2",
+		"name": "店家資訊",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27175176",
+		"_collection_link": "https://speeding-rocket-219322.postman.co/workspace/BlindBox~6a53a0a5-aeba-4059-a5e9-27a54eed8959/collection/27175176-5b9e935b-1a58-4588-bfa0-fcb93e2081e2?action=share&source=collection_link&creator=27175176"
+	},
+	"item": [
+		{
+			"name": "店家查詢自己的資訊",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL1N0b3JlTG9naW4iLCJpYXQiOjE3MDI5NzA5ODEsImV4cCI6MTcwMjk3NDU4MSwibmJmIjoxNzAyOTcwOTgxLCJqdGkiOiIwT2VseVJnVFdZcVFHdU1aIiwic3ViIjoiMzAiLCJwcnYiOiI2MmJjOGQwZGVhOWJiZDViZGU5ODY5MDg1MmIxMTM1MjZlZmVkYmZhIn0.fpg8zAGsvsMkiu_23ivjQR1Wr_dK4uBG1E1YUFcm6Ok",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/GetStoreDetails",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"GetStoreDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "店家更改姓名",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL1N0b3JlTG9naW4iLCJpYXQiOjE3MDI5NzA5ODEsImV4cCI6MTcwMjk3NDU4MSwibmJmIjoxNzAyOTcwOTgxLCJqdGkiOiIwT2VseVJnVFdZcVFHdU1aIiwic3ViIjoiMzAiLCJwcnYiOiI2MmJjOGQwZGVhOWJiZDViZGU5ODY5MDg1MmIxMTM1MjZlZmVkYmZhIn0.fpg8zAGsvsMkiu_23ivjQR1Wr_dK4uBG1E1YUFcm6Ok",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"new_name\":\"超級無敵惡質店家\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/UpdateStoreName",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"UpdateStoreName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "店家改密碼",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL1N0b3JlTG9naW4iLCJpYXQiOjE3MDI5NzA5ODEsImV4cCI6MTcwMjk3NDU4MSwibmJmIjoxNzAyOTcwOTgxLCJqdGkiOiIwT2VseVJnVFdZcVFHdU1aIiwic3ViIjoiMzAiLCJwcnYiOiI2MmJjOGQwZGVhOWJiZDViZGU5ODY5MDg1MmIxMTM1MjZlZmVkYmZhIn0.fpg8zAGsvsMkiu_23ivjQR1Wr_dK4uBG1E1YUFcm6Ok",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"current_password\":\"111111\",\r\n    \"new_password\":\"111111\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/UpdateStorePassword",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"UpdateStorePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "店家改地址",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL1N0b3JlTG9naW4iLCJpYXQiOjE3MDI5OTYyMjcsImV4cCI6MTcwMjk5OTgyNywibmJmIjoxNzAyOTk2MjI3LCJqdGkiOiJRTXpYaE1ISnYxekpTdlROIiwic3ViIjoiMzAiLCJwcnYiOiI2MmJjOGQwZGVhOWJiZDViZGU5ODY5MDg1MmIxMTM1MjZlZmVkYmZhIn0.B5QkROJIUZctvSO7q2lmrB5xQGAV3qFPLQdASF0QLBc",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"longitude\":\"666\",\r\n    \"latitude\":\"666\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/updateStoreLocation",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"updateStoreLocation"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

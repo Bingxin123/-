@@ -1,0 +1,221 @@
+{
+	"info": {
+		"_postman_id": "aa0c6b8b-a963-413e-a923-5c5af09c1ccd",
+		"name": "盲盒的增改刪查",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27175176",
+		"_collection_link": "https://speeding-rocket-219322.postman.co/workspace/BlindBox~6a53a0a5-aeba-4059-a5e9-27a54eed8959/collection/27175176-aa0c6b8b-a963-413e-a923-5c5af09c1ccd?action=share&source=collection_link&creator=27175176"
+	},
+	"item": [
+		{
+			"name": "店家新增盲盒",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL1N0b3JlTG9naW4iLCJpYXQiOjE3MDI4OTY5NTksImV4cCI6MTcwMjkwMDU1OSwibmJmIjoxNzAyODk2OTU5LCJqdGkiOiJ1U0dHTTNNZllrelpFZ05xIiwic3ViIjoiMjkiLCJwcnYiOiI2MmJjOGQwZGVhOWJiZDViZGU5ODY5MDg1MmIxMTM1MjZlZmVkYmZhIn0.hcVMM-rHlid_TR5W26UBw21eH2LHl7zjlzp_lcbvjlE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"測試8\",\r\n    \"img\":\"djfgsidjfg5d4fg65sf4ghsfg\",\r\n    \"price\":\"877\",\r\n    \"desc\":\"很好吃的呢\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/CreateBlindbox",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"CreateBlindbox"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "店家更新盲盒",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL1N0b3JlTG9naW4iLCJpYXQiOjE3MDI4MzYyNzgsImV4cCI6MTcwMjgzOTg3OCwibmJmIjoxNzAyODM2Mjc4LCJqdGkiOiJONjRmUDlKeDNGd0lscTdPIiwic3ViIjoiMjkiLCJwcnYiOiI2MmJjOGQwZGVhOWJiZDViZGU5ODY5MDg1MmIxMTM1MjZlZmVkYmZhIn0.q0lV80U5KoRV7khFuThY8kqUj7mJ7BuuFmQlTbzkXMM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"6\",\r\n    \"name\":\"大便盲盒00\",\r\n    \"img\":\"djfgsidjfg5d4fg65sf4ghsfg\",\r\n    \"price\":\"778800\",\r\n    \"desc\":\"超難吃300\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/UpdateBlindbox",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"UpdateBlindbox"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "店家刪除盲盒",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL1N0b3JlTG9naW4iLCJpYXQiOjE3MDI4MzY3MzUsImV4cCI6MTcwMjg0MDMzNSwibmJmIjoxNzAyODM2NzM1LCJqdGkiOiJLRGZuNDNrYUdCSkc2T3dtIiwic3ViIjoiMjUiLCJwcnYiOiI2MmJjOGQwZGVhOWJiZDViZGU5ODY5MDg1MmIxMTM1MjZlZmVkYmZhIn0.ObbPBmquFOMWYKovZhTzNXHDjoGDHJH7VDVzn2omfT8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/DeleteBlindbox",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"DeleteBlindbox"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "店家查看自己有賣哪些盲盒",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL1N0b3JlTG9naW4iLCJpYXQiOjE3MDI5MDY2NDgsImV4cCI6MTcwMjkxMDI0OCwibmJmIjoxNzAyOTA2NjQ4LCJqdGkiOiJJUERxT0djd2NwWG5QNHdsIiwic3ViIjoiMzAiLCJwcnYiOiI2MmJjOGQwZGVhOWJiZDViZGU5ODY5MDg1MmIxMTM1MjZlZmVkYmZhIn0.pVxWhQlpM0Tne8FRj4AaFNf8GPNa1kndNVEPmSAo_BE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/GetAllBlindbox",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"GetAllBlindbox"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "店家查看自己賣的該盲盒",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL1N0b3JlTG9naW4iLCJpYXQiOjE3MDI5MDY2NDgsImV4cCI6MTcwMjkxMDI0OCwibmJmIjoxNzAyOTA2NjQ4LCJqdGkiOiJJUERxT0djd2NwWG5QNHdsIiwic3ViIjoiMzAiLCJwcnYiOiI2MmJjOGQwZGVhOWJiZDViZGU5ODY5MDg1MmIxMTM1MjZlZmVkYmZhIn0.pVxWhQlpM0Tne8FRj4AaFNf8GPNa1kndNVEPmSAo_BE",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/GetBlindbox",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"GetBlindbox"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

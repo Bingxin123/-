@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "7ec9554f-8c11-4fbf-abfb-b89b70b40f9b",
+		"name": "會員對歷史訂單",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27175176",
+		"_collection_link": "https://speeding-rocket-219322.postman.co/workspace/BlindBox~6a53a0a5-aeba-4059-a5e9-27a54eed8959/collection/27175176-7ec9554f-8c11-4fbf-abfb-b89b70b40f9b?action=share&source=collection_link&creator=27175176"
+	},
+	"item": [
+		{
+			"name": "會員訂單歷史紀錄",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL1VzZXJMb2dpbiIsImlhdCI6MTcwMjkwODcyNywiZXhwIjoxNzAyOTEyMzI3LCJuYmYiOjE3MDI5MDg3MjcsImp0aSI6IlRyVjg5U2FkaEc3SllPZlIiLCJzdWIiOiIzNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.jJryHPv9eqriHowcw_cizt6ElK7wU2OrMAOndHsaFQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/GetUserOrder",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"GetUserOrder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "會員對訂單打分數和評論",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL1VzZXJMb2dpbiIsImlhdCI6MTcwMjkwODcyNywiZXhwIjoxNzAyOTEyMzI3LCJuYmYiOjE3MDI5MDg3MjcsImp0aSI6IlRyVjg5U2FkaEc3SllPZlIiLCJzdWIiOiIzNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.jJryHPv9eqriHowcw_cizt6ElK7wU2OrMAOndHsaFQw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 12,\r\n    \"score\": 1,\r\n    \"comment\": \"狗都不吃\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/RateOrder",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"RateOrder"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

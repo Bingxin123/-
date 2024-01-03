@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "950672ae-0e7a-43b2-8e99-1cc14237e2fc",
+		"name": "店家對訂單",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27175176",
+		"_collection_link": "https://speeding-rocket-219322.postman.co/workspace/BlindBox~6a53a0a5-aeba-4059-a5e9-27a54eed8959/collection/27175176-950672ae-0e7a-43b2-8e99-1cc14237e2fc?action=share&source=collection_link&creator=27175176"
+	},
+	"item": [
+		{
+			"name": "店家有哪些訂單",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL1N0b3JlTG9naW4iLCJpYXQiOjE3MDI5MDgzODUsImV4cCI6MTcwMjkxMTk4NSwibmJmIjoxNzAyOTA4Mzg1LCJqdGkiOiJocDFTWnBFWW45VHFZY0p3Iiwic3ViIjoiMzAiLCJwcnYiOiI2MmJjOGQwZGVhOWJiZDViZGU5ODY5MDg1MmIxMTM1MjZlZmVkYmZhIn0.V-ip0ghUvHAAmdPBL0_a1l6-nbXHDjk3bEzGZpS9eGA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/getThisStoreBlindbox",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getThisStoreBlindbox"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "店家改訂單狀態",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL1N0b3JlTG9naW4iLCJpYXQiOjE3MDI5MDgzODUsImV4cCI6MTcwMjkxMTk4NSwibmJmIjoxNzAyOTA4Mzg1LCJqdGkiOiJocDFTWnBFWW45VHFZY0p3Iiwic3ViIjoiMzAiLCJwcnYiOiI2MmJjOGQwZGVhOWJiZDViZGU5ODY5MDg1MmIxMTM1MjZlZmVkYmZhIn0.V-ip0ghUvHAAmdPBL0_a1l6-nbXHDjk3bEzGZpS9eGA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":\"10\",\r\n    \"status\":\"運送中\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/StoreSettingStatus",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"StoreSettingStatus"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

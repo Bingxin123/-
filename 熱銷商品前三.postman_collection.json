@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "7dbe2c94-a78b-485e-9e9a-b4a7c7dca65f",
+		"name": "熱銷商品前三",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27175176",
+		"_collection_link": "https://speeding-rocket-219322.postman.co/workspace/BlindBox~6a53a0a5-aeba-4059-a5e9-27a54eed8959/collection/27175176-7dbe2c94-a78b-485e-9e9a-b4a7c7dca65f?action=share&source=collection_link&creator=27175176"
+	},
+	"item": [
+		{
+			"name": "尋找熱銷前三名的盲盒",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/getTop3BestSellingBlindboxes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getTop3BestSellingBlindboxes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

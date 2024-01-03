@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "bc5d8f54-9a04-461c-b7e7-8ee2ce464370",
+		"name": "會員資訊",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27175176",
+		"_collection_link": "https://speeding-rocket-219322.postman.co/workspace/BlindBox~6a53a0a5-aeba-4059-a5e9-27a54eed8959/collection/27175176-bc5d8f54-9a04-461c-b7e7-8ee2ce464370?action=share&source=collection_link&creator=27175176"
+	},
+	"item": [
+		{
+			"name": "會員查詢自己的資訊",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL1VzZXJMb2dpbiIsImlhdCI6MTcwMjk3MDAxMSwiZXhwIjoxNzAyOTczNjExLCJuYmYiOjE3MDI5NzAwMTEsImp0aSI6IkNGdmNvTGRvdFNwclB2YVciLCJzdWIiOiIzNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.6eYamSPOeGHM1m6P068F8khyBEB9EwLKhuVvoAjphb0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/getUserDetails",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getUserDetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "會員更改姓名",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL1VzZXJMb2dpbiIsImlhdCI6MTcwMjk3MDAxMSwiZXhwIjoxNzAyOTczNjExLCJuYmYiOjE3MDI5NzAwMTEsImp0aSI6IkNGdmNvTGRvdFNwclB2YVciLCJzdWIiOiIzNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.6eYamSPOeGHM1m6P068F8khyBEB9EwLKhuVvoAjphb0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"new_name\":\"低能兒6\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/updateUserName",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"updateUserName"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "會員改密碼",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL1VzZXJMb2dpbiIsImlhdCI6MTcwMjk3MDAxMSwiZXhwIjoxNzAyOTczNjExLCJuYmYiOjE3MDI5NzAwMTEsImp0aSI6IkNGdmNvTGRvdFNwclB2YVciLCJzdWIiOiIzNCIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.6eYamSPOeGHM1m6P068F8khyBEB9EwLKhuVvoAjphb0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"current_password\":\"1111116666\",\r\n    \"new_password\":\"111111\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/updateUserPassword",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"updateUserPassword"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

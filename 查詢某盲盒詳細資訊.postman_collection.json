@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "f28f4b55-5732-4f95-988b-de772b789231",
+		"name": "查詢某盲盒詳細資訊",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27175176",
+		"_collection_link": "https://speeding-rocket-219322.postman.co/workspace/BlindBox~6a53a0a5-aeba-4059-a5e9-27a54eed8959/collection/27175176-f28f4b55-5732-4f95-988b-de772b789231?action=share&source=collection_link&creator=27175176"
+	},
+	"item": [
+		{
+			"name": "查詢某盲盒詳細資訊(評分評論評分者)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/getBlindboxDetailsWithScore",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getBlindboxDetailsWithScore"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

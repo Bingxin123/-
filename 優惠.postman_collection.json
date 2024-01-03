@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "a43c22fd-68f4-4415-8c26-98cd2a5f2137",
+		"name": "優惠",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27175176",
+		"_collection_link": "https://speeding-rocket-219322.postman.co/workspace/BlindBox~6a53a0a5-aeba-4059-a5e9-27a54eed8959/collection/27175176-a43c22fd-68f4-4415-8c26-98cd2a5f2137?action=share&source=collection_link&creator=27175176"
+	},
+	"item": [
+		{
+			"name": "店家新增優惠",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL1N0b3JlTG9naW4iLCJpYXQiOjE3MDI4OTE5NzAsImV4cCI6MTcwMjg5NTU3MCwibmJmIjoxNzAyODkxOTcwLCJqdGkiOiI5NTM3Zkx3azRpYU5zMUJkIiwic3ViIjoiMzAiLCJwcnYiOiI2MmJjOGQwZGVhOWJiZDViZGU5ODY5MDg1MmIxMTM1MjZlZmVkYmZhIn0.hUSQ-BKUKBE2PZdvpvPqFkYvNKv9mLiYBfQiE66a-Xs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"blindbox_id\": \"13\",\r\n    \"desc\": \"696969元啦幹你娘\",\r\n    \"expire_time\": \"2023-12-31 23:59:59\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/CreateDiscount",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"CreateDiscount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "店家更新優惠",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL1N0b3JlTG9naW4iLCJpYXQiOjE3MDI4OTE5NzAsImV4cCI6MTcwMjg5NTU3MCwibmJmIjoxNzAyODkxOTcwLCJqdGkiOiI5NTM3Zkx3azRpYU5zMUJkIiwic3ViIjoiMzAiLCJwcnYiOiI2MmJjOGQwZGVhOWJiZDViZGU5ODY5MDg1MmIxMTM1MjZlZmVkYmZhIn0.hUSQ-BKUKBE2PZdvpvPqFkYvNKv9mLiYBfQiE66a-Xs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n    \"blindbox_id\":\"13\",\r\n    \"desc\": \"69元啦幹你娘2\",\r\n    \"expire_time\": \"2023-12-01 23:59:59\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/UpdateDiscount",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"UpdateDiscount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "店家刪除優惠",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvYXBpL1N0b3JlTG9naW4iLCJpYXQiOjE3MDI4OTE5NzAsImV4cCI6MTcwMjg5NTU3MCwibmJmIjoxNzAyODkxOTcwLCJqdGkiOiI5NTM3Zkx3azRpYU5zMUJkIiwic3ViIjoiMzAiLCJwcnYiOiI2MmJjOGQwZGVhOWJiZDViZGU5ODY5MDg1MmIxMTM1MjZlZmVkYmZhIn0.hUSQ-BKUKBE2PZdvpvPqFkYvNKv9mLiYBfQiE66a-Xs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"blindbox_id\":\"12\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/DeleteDiscount",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"DeleteDiscount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "查詢未過期優惠",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/getActiveDiscounts",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"getActiveDiscounts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
